@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن الدليل - دليل فعاليات الجامعة</title>
+
+    <!-- ربط Bootstrap وخط Cairo وملف CSS الخاص بك -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="font-family: 'Cairo', sans-serif;">
+
+    <!-- رأس الصفحة: Logo + Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" href="index.html">دليل الفعاليات</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+                        <!-- صفحة عن الدليل هي النشطة هنا -->
+                        <li class="nav-item"><a class="nav-link active" href="about.html">عن الدليل</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container my-5">
+
+        <h1 class="text-center mb-5 border-bottom pb-3">عن الدليل</h1>
+
+        <!-- القسم الأول: الرؤية، الرسالة، والهدف -->
+        <section class="row mb-5 g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-primary mb-3">هدفنا</h4>
+                        <p class="card-text">توفير منصة موحدة وشاملة تجمع كافة الفعاليات والأنشطة المقامة في الجامعة الافتراضية لتسهيل وصول الطلاب إليها ومتابعتها.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-success mb-3">رؤيتنا</h4>
+                        <p class="card-text">أن نكون الوجهة الأولى والموثوقة لكل طالب يبحث عن الإثراء المعرفي، الثقافي، والرياضي داخل المجتمع الجامعي.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-warning mb-3">رسالتنا للمجتمع</h4>
+                        <p class="card-text">تعزيز التفاعل والمشاركة الطلابية، وبناء مجتمع جامعي حيوي ومتصل يدعم المواهب ويشجع على الإبداع المستمر.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- القسم الثاني: فريق العمل -->
+        <section class="mb-5">
+            <h3 class="text-center mb-4 border-bottom pb-2">فريق العمل</h3>
+            <div class="row text-center justify-content-center g-4">
+                <!-- عضو الفريق 1 -->
+                <div class="col-md-3">
+                    <img src="img/team1.jpg" class="rounded-circle mb-3 img-thumbnail shadow-sm" alt="عضو الفريق" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5>اسمك هنا</h5>
+                    <p class="text-muted">مطور المشروع الأساسي</p>
+                </div>
+                <!-- عضو الفريق 2 -->
+                <div class="col-md-3">
+                    <img src="img/team2.jpg" class="rounded-circle mb-3 img-thumbnail shadow-sm" alt="عضو الفريق" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5>اسم زميلك</h5>
+                    <p class="text-muted">مصمم الواجهات</p>
+                </div>
+                <!-- عضو الفريق 3 -->
+                <div class="col-md-3">
+                    <img src="img/team3.jpg" class="rounded-circle mb-3 img-thumbnail shadow-sm" alt="عضو الفريق" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5>اسم زميلك</h5>
+                    <p class="text-muted">مدير المحتوى</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- القسم الثالث: سياسات النشر (كما طلب الدكتور) -->
+        <section class="bg-light p-4 rounded shadow-sm mb-5">
+            <h3 class="mb-3 border-bottom pb-2">سياسات النشر ومعايير تقديم الفعاليات</h3>
+            <ul class="list-group list-group-flush bg-transparent">
+                <li class="list-group-item bg-transparent">
+                    <strong>تقديم فعالية:</strong> يجب تقديم طلب نشر الفعالية قبل أسبوعين على الأقل من موعد إقامتها لتتم مراجعتها.
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <strong>معايير النشر المختصرة:</strong> يجب أن تكون الفعالية ذات صلة بالمجتمع الجامعي وتلتزم بالقيم والأخلاق الأكاديمية للجامعة.
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <strong>دقة المعلومات:</strong> يتحمل منظم الفعالية مسؤولية صحة التواريخ، الأوقات، والمواقع المذكورة.
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- تذييل الصفحة: Footer -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-2">معلومات التواصل: contact@svuonline.org | هاتف: 0096311000000</p>
+            <p class="mb-2">
+                روابط سوشيال:
+                <a href="#" class="text-white text-decoration-none mx-2">فيسبوك</a> |
+                <a href="#" class="text-white text-decoration-none mx-2">تويتر</a> |
+                <a href="#" class="text-white text-decoration-none mx-2">إنستغرام</a>
+            </p>
+            <p class="mb-0 text-muted">&copy; 2026 جميع الحقوق محفوظة لدليل فعاليات الجامعة الافتراضية.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
