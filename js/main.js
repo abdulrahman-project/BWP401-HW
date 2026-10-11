@@ -75,4 +75,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // ==========================================
+    // 3. كود زر العودة للأعلى
+    // ==========================================
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    if (scrollToTopBtn) {
+        // إظهار الزر عندما ينزل المستخدم 300 بكسل للأسفل
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        // عند الضغط على الزر، العودة للأعلى بسلاسة
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
 });
