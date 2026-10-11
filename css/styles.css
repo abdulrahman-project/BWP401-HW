@@ -25,23 +25,101 @@ main {
 }
 
 /* ==========================================
-   ÇáæÖÚ Çááíáí (Dark Mode)
+   ÇáæÖÚ Çááíáí ÇáãÊßÇãá æÇáãÍÓä (Dark Mode)
    ========================================== */
 body.dark-theme {
-    background-color: #121212 !important;
-    color: #f1f1f1 !important;
+    background-color: #121212 !important; /* ÎáİíÉ ÏÇßäÉ ãÑíÍÉ ÌÏÇğ ááÚíä */
+    color: #e0e0e0 !important; /* äÕæÕ Èáæä ÑãÇÏí İÇÊÍ ØÈíÚí */
 }
 
-    body.dark-theme .card {
+    /* ÊÍæíá ÔÑíØ ÇáÊäŞá ÇáÚáæí ááæÖÚ ÇáÏÇßä */
+    body.dark-theme .navbar {
         background-color: #1e1e1e !important;
-        border: 1px solid #333 !important;
+        border-bottom: 1px solid #2d2d2d !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
     }
 
+        body.dark-theme .navbar .nav-link,
+        body.dark-theme .navbar .navbar-brand {
+            color: #e0e0e0 !important; /* ÌÚá äÕæÕ ÇáŞÇÆãÉ İÇÊÍÉ */
+        }
+
+            body.dark-theme .navbar .nav-link:hover,
+            body.dark-theme .navbar .nav-link.active {
+                color: #3498db !important; /* áæä ÃÒÑŞ Îİíİ ÚäÏ ÇáãÑæÑ Ãæ ÇáÊÍÏíÏ */
+            }
+
+    /* ÊÚÏíá ÎáİíÇÊ ÇáÃŞÓÇã ÇáßÈíÑÉ (ãËá ÇáÃŞÓÇã ÇáÈíÖÇÁ İí ÇáÕæÑÉ) */
+    body.dark-theme main,
+    body.dark-theme section,
+    body.dark-theme .bg-light,
+    body.dark-theme .container-fluid {
+        background-color: #121212 !important;
+        color: #e0e0e0 !important;
+    }
+
+    /* ÊÍÓíä Ôßá ÈØÇŞÇÊ ÇáãÍÊæì (Cards) áÊÕÈÍ ÏÇßäÉ æÈÇÑÒÉ ÈÔßá ËáÇËí ÇáÃÈÚÇÏ */
+    body.dark-theme .card,
+    body.dark-theme .bg-dark-custom { /* ÅĞÇ ÇÓÊÎÏãÊ ßÑæÊ ãÎÕÕÉ */
+        background-color: #1e1e1e !important;
+        border: 1px solid #2d2d2d !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5) !important;
+    }
+
+    /* ÊİÊíÍ ßÇİÉ ÇáäÕæÕ æÇáİŞÑÇÊ İí ÇáæÖÚ ÇáÏÇßä */
     body.dark-theme .card-body,
     body.dark-theme .card-title,
+    body.dark-theme h1,
+    body.dark-theme h2,
+    body.dark-theme h3,
+    body.dark-theme h4,
+    body.dark-theme h5,
     body.dark-theme p,
-    body.dark-theme label {
-        color: #f1f1f1 !important;
+    body.dark-theme span,
+    body.dark-theme label,
+    body.dark-theme li {
+        color: #e0e0e0 !important;
+    }
+
+    /* ãÚÇáÌÉ ÇáäÕæÕ ÇáİÑÚíÉ ÇáÈÇåÊÉ (ãËá ÇáãáÇÍÙÇÊ İí ÇáÃÓİá) áÊÕÈÍ ãŞÑæÁÉ */
+    body.dark-theme .text-muted,
+    body.dark-theme .text-secondary {
+        color: #b0b0b0 !important;
+    }
+
+    /* ÊÍÓíä ÍŞæá ÇáÅÏÎÇá æÇáÈÍË (Inputs) áÊäÇÓÈ ÇáÙáÇã */
+    body.dark-theme .form-control,
+    body.dark-theme .form-select {
+        background-color: #2b2b2b !important;
+        border-color: #444 !important;
+        color: #ffffff !important;
+    }
+
+        body.dark-theme .form-control::placeholder {
+            color: #888 !important;
+        }
+
+    /* ÖãÇä Ãä ÍÏæÏ ÇáÌÏÇæá æÇáŞæÇÆã ÊäÏãÌ ÈÇáÙáÇã */
+    body.dark-theme hr,
+    body.dark-theme border {
+        border-color: #333 !important;
+    }
+
+    /* ÊĞííá ÇáÕİÍÉ (Footer) */
+    body.dark-theme footer {
+        background-color: #0c0c0c !important;
+        border-top: 1px solid #1f1f1f !important;
+    }
+
+        body.dark-theme footer p,
+        body.dark-theme footer a {
+            color: #a0a0a0 !important;
+        }
+
+    /* ÊÃËíÑ ÒÑ ÇáæÖÚ Çááíáí äİÓå ÚäÏ ÇáÊİÚíá */
+    body.dark-theme #darkModeToggle {
+        background-color: #f1c40f !important;
+        color: #121212 !important;
     }
 
 /* ÊäÓíŞ ÒÑ ÇáæÖÚ Çááíáí ÇáÚÇÆã İí ÇáÒÇæíÉ ÇáíÓÑì */
