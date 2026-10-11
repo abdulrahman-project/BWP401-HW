@@ -145,3 +145,40 @@ body.dark-theme #darkModeToggle {
     background-color: #f1c40f; /* áæä ÃÕİÑ íÚÈÑ Úä ÇáÔãÓ */
     color: #121212;
 }
+
+/* ==========================================
+   Íá ãÔßáÉ ÃÓåã ÇáÓáÇíÏÑ (Carousel)
+   ========================================== */
+/* 1. ÚßÓ áæä ÇáÃÓåã Åáì ÇáÃÓæÏ İí ÇáæÖÚ ÇáİÇÊÍ */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100);
+}
+
+/* 2. ÅÚÇÏÉ ÇáÃÓåã ááæä ÇáÃÈíÖ ÇáØÈíÚí İí ÇáæÖÚ Çááíáí */
+body.dark-theme .carousel-control-prev-icon,
+body.dark-theme .carousel-control-next-icon {
+    filter: none !important;
+}
+
+/* ==========================================
+   ÊßÈíÑ ãÑÈÚÇÊ ÇáİÚÇáíÇÊ (ÇáßÑæÊ) æÊäÓíŞåÇ
+   ========================================== */
+.card {
+    min-height: 280px; /* ÊÍÏíÏ ÇÑÊİÇÚ ÃÏäì ááßÑÊ áßí áÇ íäßãÔ */
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* ãÓÇÍÉ ÏÇÎáíÉ ÅÖÇİíÉ Íæá ÇáßÑÊ */
+}
+
+.card-body {
+    padding: 25px 15px; /* ÊßÈíÑ ÇáãÓÇÍÉ Íæá ÇáäÕæÕ ÏÇÎá ÇáßÑÊ */
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* áÌÚá ÌÓã ÇáßÑÊ íÊãÏÏ */
+}
+
+    /* ÏİÚ ÒÑ "ÇáÊİÇÕíá" áÃÓİá ÇáßÑÊ ÏÇÆãÇğ áíßæä Ôßá ÇáßÑæÊ ãÊÓÇæíÇğ */
+    .card-body .btn {
+        margin-top: auto;
+    }
