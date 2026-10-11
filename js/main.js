@@ -99,3 +99,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// ==========================================
+// 4. كود الوضع الليلي (Dark Mode)
+// ==========================================
+const darkModeToggle = document.getElementById("darkModeToggle");
+const body = document.body;
+
+if (darkModeToggle) {
+    // التحقق مما إذا كان المستخدم قد اختار الوضع الليلي مسبقاً في صفحة أخرى
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-theme");
+        darkModeToggle.innerHTML = "☀️";
+    }
+
+    // تفعيل التبديل عند الضغط على الزر
+    darkModeToggle.addEventListener("click", function () {
+        body.classList.toggle("dark-theme");
+
+        // تغيير الأيقونة وحفظ الإعداد في ذاكرة المتصفح
+        if (body.classList.contains("dark-theme")) {
+            darkModeToggle.innerHTML = "☀️";
+            localStorage.setItem("theme", "dark");
+        } else {
+            darkModeToggle.innerHTML = "🌙";
+            localStorage.setItem("theme", "light");
+        }
+    });
+}
