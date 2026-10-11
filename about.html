@@ -12,25 +12,55 @@
 </head>
 <body style="font-family: 'Cairo', sans-serif;">
 
-    <!-- رأس الصفحة: Logo + Navbar -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand fw-bold text-primary" href="index.html">دليل الفعاليات</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
-                        <!-- صفحة عن الدليل هي النشطة هنا -->
-                        <li class="nav-item"><a class="nav-link active" href="about.html">عن الدليل</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
-                    </ul>
+    <!-- رأس الصفحة الرسمي مع الأعلام والشعارات -->
+    <header class="bg-white border-bottom shadow-sm">
+
+        <div class="container-fluid px-4 py-3">
+            <div class="row align-items-center">
+
+                <!-- 1. الشعار الأول (أقصى اليمين بالمقاس القديم الهادئ) -->
+                <div class="col-3 text-start">
+                    <img src="img/logo1.png" alt="شعار اليمين" style="max-height: 150px;" class="img-fluid">
+                </div>
+
+                <!-- 2. عنوان الموقع في المنتصف -->
+                <div class="col-6 text-center">
+                    <h2 class="fw-bold text-primary mb-0">دليل فعاليات الجامعة الافتراضية</h2>
+                </div>
+
+                <!-- 3. الجهة اليسرى: الشعار الأيسر وتحته الأعلام -->
+                <div class="col-3 text-end d-flex flex-column align-items-end justify-content-center">
+                    <!-- الشعار الأيسر -->
+                    <img src="img/logo2.png" alt="شعار اليسار" style="max-height: 75px;" class="img-fluid mb-1">
+
+                    <!-- الأعلام الصغيرة تحته -->
+                    <div class="d-flex gap-1">
+                        <img src="img/flag1.png" alt="علم بريطانيا" style="height: 32px; width: 49px; object-fit: cover;">
+                        <img src="img/flag2.png" alt="علم سوريا" style="height: 32px; width: 49px; object-fit: cover;">
+                    </div>
+
                 </div>
             </div>
-        </nav>
+        </div>
+        <!-- شريط التنقل الرئيسي -->
+        <div class="mt-2 bg-dark w-100">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark py-2">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+                            <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
     </header>
 
     <!-- المحتوى الرئيسي -->
@@ -66,46 +96,46 @@
             </div>
         </section>
 
-        
-            <h3 class="text-center my-4">فريق العمل</h3>
-            <div class="row text-center justify-content-center g-4">
-                <!-- العضو الأول -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="p-3 border rounded shadow-sm bg-dark-custom">
-                        <h5 class="fw-bold mb-1">عبدالرحمن السبيعي</h5>
-                        <p class="text-muted small mb-0">مطوّر المشروع</p>
-                        <span class="text-secondary small">ID: 322560</span>
-                    </div>
-                </div>
 
-                <!-- العضو الثاني -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="p-3 border rounded shadow-sm bg-dark-custom">
-                        <h5 class="fw-bold mb-1">ايه المنجد</h5>
-                        <p class="text-muted small mb-0">مصممة الواجهات</p>
-                        <span class="text-secondary small">ID: 343295</span>
-                    </div>
-                </div>
-
-                <!-- العضو الثالث -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="p-3 border rounded shadow-sm bg-dark-custom">
-                        <h5 class="fw-bold mb-1">انس السليمان</h5>
-                        <p class="text-muted small mb-0">مدير المحتوى</p>
-                        <span class="text-secondary small">ID: 321382</span>
-                    </div>
-                </div>
-
-                <!-- العضو الرابع (الجديد) -->
-                <div class="col-md-3 col-sm-6">
-                    <div class="p-3 border rounded shadow-sm bg-dark-custom">
-                        <h5 class="fw-bold mb-1">شهد عبدالله</h5>
-                        <p class="text-muted small mb-0">مسؤولة التنسيق</p>
-                        <span class="text-secondary small">ID: 353472</span>
-                    </div>
+        <h3 class="text-center my-4">فريق العمل</h3>
+        <div class="row text-center justify-content-center g-4">
+            <!-- العضو الأول -->
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded shadow-sm bg-dark-custom">
+                    <h5 class="fw-bold mb-1">عبدالرحمن السبيعي</h5>
+                    <p class="text-muted small mb-0">مطوّر المشروع</p>
+                    <span class="text-secondary small">ID: 322560</span>
                 </div>
             </div>
-       
+
+            <!-- العضو الثاني -->
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded shadow-sm bg-dark-custom">
+                    <h5 class="fw-bold mb-1">ايه المنجد</h5>
+                    <p class="text-muted small mb-0">مصممة الواجهات</p>
+                    <span class="text-secondary small">ID: 343295</span>
+                </div>
+            </div>
+
+            <!-- العضو الثالث -->
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded shadow-sm bg-dark-custom">
+                    <h5 class="fw-bold mb-1">انس السليمان</h5>
+                    <p class="text-muted small mb-0">مدير المحتوى</p>
+                    <span class="text-secondary small">ID: 321382</span>
+                </div>
+            </div>
+
+            <!-- العضو الرابع (الجديد) -->
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded shadow-sm bg-dark-custom">
+                    <h5 class="fw-bold mb-1">شهد عبدالله</h5>
+                    <p class="text-muted small mb-0">مسؤولة التنسيق</p>
+                    <span class="text-secondary small">ID: 353472</span>
+                </div>
+            </div>
+        </div>
+
 
         <!-- القسم الثالث: سياسات النشر (كما طلب الدكتور) -->
         <section class="bg-light p-4 rounded shadow-sm mb-5">

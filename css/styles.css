@@ -182,3 +182,13 @@ body.dark-theme .carousel-control-next-icon {
     .card-body .btn {
         margin-top: auto;
     }
+
+/* ÊËÈíÊ áæä ÔÑíØ ÇáÊäŞá æÇáåíÏÑ ÈÔßá ãæÍÏ æäåÇÆí İí ÇáæÖÚ Çááíáí */
+body.dark-theme header,
+body.dark-theme .navbar,
+body.dark-theme div[style*="background-color"] {
+    background-color: #212529 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}

@@ -16,24 +16,55 @@
 </head>
 <body style="font-family: 'Cairo', sans-serif;">
 
-    <!-- رأس الصفحة: Logo + Navbar -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand fw-bold text-primary" href="index.html">دليل الفعاليات</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
-                    </ul>
+    <!-- رأس الصفحة الرسمي مع الأعلام والشعارات -->
+    <header class="bg-white border-bottom shadow-sm">
+
+        <div class="container-fluid px-4 py-3">
+            <div class="row align-items-center">
+
+                <!-- 1. الشعار الأول (أقصى اليمين بالمقاس القديم الهادئ) -->
+                <div class="col-3 text-start">
+                    <img src="img/logo1.png" alt="شعار اليمين" style="max-height: 150px;" class="img-fluid">
+                </div>
+
+                <!-- 2. عنوان الموقع في المنتصف -->
+                <div class="col-6 text-center">
+                    <h2 class="fw-bold text-primary mb-0">دليل فعاليات الجامعة الافتراضية</h2>
+                </div>
+
+                <!-- 3. الجهة اليسرى: الشعار الأيسر وتحته الأعلام -->
+                <div class="col-3 text-end d-flex flex-column align-items-end justify-content-center">
+                    <!-- الشعار الأيسر -->
+                    <img src="img/logo2.png" alt="شعار اليسار" style="max-height: 75px;" class="img-fluid mb-1">
+
+                    <!-- الأعلام الصغيرة تحته -->
+                    <div class="d-flex gap-1">
+                        <img src="img/flag1.png" alt="علم بريطانيا" style="height: 32px; width: 49px; object-fit: cover;">
+                        <img src="img/flag2.png" alt="علم سوريا" style="height: 32px; width: 49px; object-fit: cover;">
+                    </div>
+
                 </div>
             </div>
-        </nav>
+        </div>
+        <!-- شريط التنقل الرئيسي -->
+        <div class="mt-2 bg-dark w-100">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark py-2">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+                            <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
     </header>
 
     <!-- المحتوى الرئيسي -->
@@ -135,7 +166,7 @@
         <div class="container text-center">
             <p class="mb-2">معلومات التواصل: info@svuonline.org | صندوق البريد: 35329 </p>
             <p class="mb-2">
-                 روابط سوشيال ميديا:
+                روابط سوشيال ميديا:
                 <a href="https://www.facebook.com/svuonline.org" target="_blank" class="text-white text-decoration-none mx-2">فيسبوك</a> |
                 <a href="https://twitter.com/SVU_Syria" target="_blank" class="text-white text-decoration-none mx-2">تويتر</a> |
                 <a href="http://instagram.com/syrian_virtual_university" target="_blank" class="text-white text-decoration-none mx-2">إنستغرام</a>
@@ -156,3 +187,4 @@
 </html>
 
 <button id="darkModeToggle" title="تبديل الوضع الليلي">🌙</button>
+
