@@ -41,24 +41,8 @@
         <!-- شريط أدوات البحث والفلترة -->
         <section class="mb-5 bg-light p-4 rounded shadow-sm">
             <form class="row g-3">
-                <!-- 1. فلتر المكان (العمود الأول) -->
-                <div class="col-md-4">
-                    <label class="form-label fw-bold">المكان</label>
-                    <select id="locationFilter" class="form-select">
-                        <option value="all">الكل</option>
-                        <option value="main-hall">القاعة الرئيسية</option>
-                        <option value="stadium">الملعب الجامعي</option>
-                        <option value="theater">المسرح</option>
-                    </select>
-                </div>
 
-                <!-- 2. فلتر التاريخ (العمود الثاني) -->
-                <div class="col-md-4">
-                    <label class="form-label fw-bold">التاريخ</label>
-                    <input type="date" id="dateFilter" class="form-control" style="direction: ltr; text-align: right;">
-                </div>
-
-                <!-- 3. فلتر التصنيف (العمود الثالث) -->
+                <!-- 1. فلتر التصنيف (العمود الأول - يمين) -->
                 <div class="col-md-4">
                     <label class="form-label fw-bold">التصنيف</label>
                     <select id="categoryFilter" class="form-select">
@@ -69,6 +53,24 @@
                         <option value="family">عائلي</option>
                     </select>
                 </div>
+
+                <!-- 2. فلتر التاريخ (العمود الثاني - وسط) -->
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">التاريخ</label>
+                    <input type="text" id="dateFilter" class="form-control" placeholder="يوم / شهر / سنة" onfocus="this.type='date'" onblur="if(!this.value) this.type='text'">
+                </div>
+
+                <!-- 3. فلتر المكان (العمود الثالث - يسار) -->
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">المكان</label>
+                    <select id="locationFilter" class="form-select">
+                        <option value="all">الكل</option>
+                        <option value="main-hall">القاعة الرئيسية</option>
+                        <option value="stadium">الملعب الجامعي</option>
+                        <option value="theater">المسرح</option>
+                    </select>
+                </div>
+
             </form>
         </section>
 
