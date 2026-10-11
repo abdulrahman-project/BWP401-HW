@@ -53,27 +53,63 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==========================================
-    // 2. كود فلترة الفعاليات في صفحة (events.html)
+    // كود فلترة الفعاليات الشامل (تصنيف، مكان، تاريخ)
     // ==========================================
-    const categoryFilter = document.getElementById("categoryFilter");
-    const eventItems = document.querySelectorAll(".event-item");
+    document.addEventListener("DOMContentLoaded", function () {
+        // جلب حقول البحث
+        const categoryFilter = document.getElementById("categoryFilter");
+        const locationFilter = document.getElementById("locationFilter");
+        const dateFilter = document.getElementById("dateFilter");
 
-    if (categoryFilter) {
-        categoryFilter.addEventListener("change", function () {
-            const selectedCategory = categoryFilter.value;
+        // جلب جميع الكروت التي تحتوي على تصنيف
+        const eventCards = document.querySelectorAll("[data-category]");
 
-            // المرور على كل الفعاليات وإخفاء أو إظهار الفعالية حسب التصنيف
-            eventItems.forEach(function (item) {
-                const itemCategory = item.getAttribute("data-category");
+        if (categoryFilter) {
+            // التحقق من وجود تصنيف محفوظ مسبقاً (البونس)
+            const savedCategory = localStorage.getItem("preferredCategory");
+            if (savedCategory) {
+                categoryFilter.value = savedCategory;
+            }
 
-                if (selectedCategory === "all" || selectedCategory === itemCategory) {
-                    item.style.display = "block"; // إظهار الكرت
-                } else {
-                    item.style.display = "none"; // إخفاء الكرت
-                }
-            });
-        });
-    }
+            // دالة الفلترة الشاملة
+            function filterEvents() {
+                // جلب القيم الحالية من الحقول الثلاثة
+                const selectedCategory = categoryFilter.value;
+                const selectedLocation = locationFilter ? locationFilter.value : "all";
+                const selectedDate = dateFilter ? dateFilter.value : "";
+
+                // حفظ التصنيف في الذاكرة
+                localStorage.setItem("preferredCategory", selectedCategory);
+
+                // المرور على جميع الكروت لفحصها
+                eventCards.forEach(card => {
+                    const cardCategory = card.getAttribute("data-category");
+                    const cardLocation = card.getAttribute("data-location");
+                    const cardDate = card.getAttribute("data-date");
+
+                    // فحص كل شرط على حدة
+                    const matchCategory = (selectedCategory === "all" || selectedCategory === "الكل" || cardCategory === selectedCategory);
+                    const matchLocation = (selectedLocation === "all" || selectedLocation === "الكل" || cardLocation === selectedLocation);
+                    const matchDate = (selectedDate === "" || cardDate === selectedDate); // إذا كان التاريخ فارغاً يتم تجاوزه
+
+                    // إذا تطابقت جميع الشروط (و) نظهر الكرت، وإلا نخفيه
+                    if (matchCategory && matchLocation && matchDate) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            // تشغيل الفلترة عند تغيير أي حقل من الحقول الثلاثة
+            categoryFilter.addEventListener("change", filterEvents);
+            if (locationFilter) locationFilter.addEventListener("change", filterEvents);
+            if (dateFilter) dateFilter.addEventListener("change", filterEvents);
+
+            // تشغيل الفلترة فور تحميل الصفحة لتطبيق التفضيل المحفوظ
+            filterEvents();
+        }
+    });
 
     // ==========================================
     // 3. كود زر العودة للأعلى

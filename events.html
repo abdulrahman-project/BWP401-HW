@@ -50,6 +50,16 @@
                         <option value="music">موسيقى</option>
                         <option value="family">عائلي</option>
                     </select>
+
+                    <input type="date" id="dateFilter" class="form-control">
+
+                    <select id="locationFilter" class="form-select">
+                        <option value="all">الكل</option>
+                        <option value="المسرح">المسرح</option>
+                        <option value="الملعب الجامعي">الملعب الجامعي</option>
+                        <option value="القاعة الرئيسية">القاعة الرئيسية</option>
+                    </select>
+
                 </div>
                 <div class="col-md-4">
                     <label for="dateFilter" class="form-label">التاريخ</label>
@@ -70,7 +80,7 @@
         <!-- قائمة الفعاليات (Cards) -->
         <section class="row g-4" id="eventsList">
             <!-- الفعالية الأولى -->
-            <div class="col-md-4 event-item" data-category="culture">
+            <div class="col-md-4 event-item" data-category="culture" data-location="main-hall" data-date="2026-11-15">
                 <div class="card h-100 shadow-sm">
                     <img src="img/event3.jpg" class="card-img-top" alt="معرض الكتاب">
                     <div class="card-body">
@@ -85,7 +95,7 @@
             </div>
 
             <!-- الفعالية الثانية -->
-            <div class="col-md-4 event-item" data-category="sport">
+            <div class="col-md-4 event-item" data-category="sport" data-location="stadium" data-date="2026-11-20">
                 <div class="card h-100 shadow-sm">
                     <img src="img/event4.jpg" class="card-img-top" alt="ماراثون">
                     <div class="card-body">
@@ -100,7 +110,7 @@
             </div>
 
             <!-- الفعالية الثالثة -->
-            <div class="col-md-4 event-item" data-category="music">
+            <div class="col-md-4 event-item" data-category="music" data-location="theater" data-date="2026-11-25">
                 <div class="card h-100 shadow-sm">
                     <img src="img/event5.jpg" class="card-img-top" alt="حفل موسيقي">
                     <div class="card-body">
