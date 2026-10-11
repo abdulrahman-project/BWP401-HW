@@ -102,11 +102,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
     // ==========================================
-    // 2. كود فلترة التصنيف فقط مع البونس 
+    // 2. كود فلترة (التصنيف + المكان + التاريخ) بأمان تام
     // ==========================================
     const categoryFilter = document.getElementById("categoryFilter");
+    const locationFilter = document.getElementById("locationFilter");
+    const dateFilter = document.getElementById("dateFilter"); // 1. أضفنا فلتر التاريخ
     const eventCards = document.querySelectorAll("[data-category]");
 
     if (categoryFilter) {
@@ -118,11 +119,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function filterEvents() {
             const selectedCategory = categoryFilter.value;
+            const selectedLocation = locationFilter ? locationFilter.value : "all";
+            const selectedDate = dateFilter ? dateFilter.value : ""; // 2. جلب التاريخ الذي اختاره المستخدم
+
             localStorage.setItem("preferredCategory", selectedCategory);
 
             eventCards.forEach(card => {
-                const cardCategory = card.getAttribute("data-category");
-                if (selectedCategory === "all" || selectedCategory === "الكل" || cardCategory === selectedCategory) {
+                const cardCategory = card.getAttribute("data-category") || "";
+                const cardLocation = card.getAttribute("data-location") || "";
+                const cardDate = card.getAttribute("data-date") || ""; // 3. قراءة تاريخ الكرت
+
+                // فحص الشروط الثلاثة
+                const matchCategory = (selectedCategory === "all" || selectedCategory === "الكل" || cardCategory === selectedCategory);
+                const matchLocation = (selectedLocation === "all" || selectedLocation === "الكل" || cardLocation === selectedLocation);
+                const matchDate = (selectedDate === "" || cardDate === selectedDate); // يتجاهل التاريخ إذا لم يقم المستخدم بتحديده
+
+                // إظهار الكرت فقط إذا تطابقت الشروط الثلاثة معاً
+                if (matchCategory && matchLocation && matchDate) {
                     card.style.display = "block";
                 } else {
                     card.style.display = "none";
@@ -132,6 +145,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         filterEvents();
         categoryFilter.addEventListener("change", filterEvents);
+
+        if (locationFilter) {
+            locationFilter.addEventListener("change", filterEvents);
+        }
+
+        // 4. تشغيل الفلتر عند إدخال التاريخ
+        if (dateFilter) {
+            dateFilter.addEventListener("change", filterEvents);
+            dateFilter.addEventListener("input", filterEvents);
+        }
     }
 });
 
