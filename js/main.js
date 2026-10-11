@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==========================================
-    // كود فلترة الفعاليات الشامل (تصنيف، مكان، تاريخ)
+    // كود فلترة الفعاليات الشامل (تصنيف، مكان، تاريخ) مع حفظ التفضيل
     // ==========================================
     document.addEventListener("DOMContentLoaded", function () {
         // جلب حقول البحث
@@ -61,38 +61,39 @@ document.addEventListener("DOMContentLoaded", function () {
         const locationFilter = document.getElementById("locationFilter");
         const dateFilter = document.getElementById("dateFilter");
 
-        // جلب جميع الكروت التي تحتوي على تصنيف
-        const eventCards = document.querySelectorAll("[data-category]");
+        // جلب جميع كروت الفعاليات لفحصها
+        const eventCards = document.querySelectorAll(".event-item");
 
-        if (categoryFilter) {
-            // التحقق من وجود تصنيف محفوظ مسبقاً (البونس)
+        if (categoryFilter && eventCards.length > 0) {
+
+            // التحقق من وجود تصنيف محفوظ مسبقاً (ميزة البونس)
             const savedCategory = localStorage.getItem("preferredCategory");
             if (savedCategory) {
                 categoryFilter.value = savedCategory;
             }
 
-            // دالة الفلترة الشاملة
+            // دالة الفلترة الأساسية
             function filterEvents() {
-                // جلب القيم الحالية من الحقول الثلاثة
                 const selectedCategory = categoryFilter.value;
                 const selectedLocation = locationFilter ? locationFilter.value : "all";
                 const selectedDate = dateFilter ? dateFilter.value : "";
 
-                // حفظ التصنيف في الذاكرة
+                // حفظ التصنيف في الذاكرة (localStorage)
                 localStorage.setItem("preferredCategory", selectedCategory);
 
-                // المرور على جميع الكروت لفحصها
+                // المرور على جميع الكروت
                 eventCards.forEach(card => {
+                    // جلب البيانات المخفية داخل كل كرت
                     const cardCategory = card.getAttribute("data-category");
                     const cardLocation = card.getAttribute("data-location");
                     const cardDate = card.getAttribute("data-date");
 
-                    // فحص كل شرط على حدة
-                    const matchCategory = (selectedCategory === "all" || selectedCategory === "الكل" || cardCategory === selectedCategory);
-                    const matchLocation = (selectedLocation === "all" || selectedLocation === "الكل" || cardLocation === selectedLocation);
-                    const matchDate = (selectedDate === "" || cardDate === selectedDate); // إذا كان التاريخ فارغاً يتم تجاوزه
+                    // فحص الشروط
+                    const matchCategory = (selectedCategory === "all" || cardCategory === selectedCategory);
+                    const matchLocation = (selectedLocation === "all" || cardLocation === selectedLocation);
+                    const matchDate = (selectedDate === "" || cardDate === selectedDate); // يتجاوز التاريخ إذا كان فارغاً
 
-                    // إذا تطابقت جميع الشروط (و) نظهر الكرت، وإلا نخفيه
+                    // إظهار الكرت فقط إذا تطابقت جميع الشروط
                     if (matchCategory && matchLocation && matchDate) {
                         card.style.display = "block";
                     } else {
@@ -101,12 +102,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
 
-            // تشغيل الفلترة عند تغيير أي حقل من الحقول الثلاثة
+            // تشغيل الفلترة عند أي تغيير في القوائم
             categoryFilter.addEventListener("change", filterEvents);
             if (locationFilter) locationFilter.addEventListener("change", filterEvents);
             if (dateFilter) dateFilter.addEventListener("change", filterEvents);
 
-            // تشغيل الفلترة فور تحميل الصفحة لتطبيق التفضيل المحفوظ
+            // تشغيل الفلترة لأول مرة عند فتح الصفحة لتطبيق المحفوظ في الذاكرة
             filterEvents();
         }
     });

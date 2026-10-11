@@ -41,37 +41,32 @@
         <!-- شريط أدوات البحث والفلترة -->
         <section class="mb-5 bg-light p-4 rounded shadow-sm">
             <form class="row g-3">
+                <!-- 1. فلتر المكان (العمود الأول) -->
                 <div class="col-md-4">
-                    <label for="categoryFilter" class="form-label">التصنيف</label>
+                    <label class="form-label fw-bold">المكان</label>
+                    <select id="locationFilter" class="form-select">
+                        <option value="all">الكل</option>
+                        <option value="main-hall">القاعة الرئيسية</option>
+                        <option value="stadium">الملعب الجامعي</option>
+                        <option value="theater">المسرح</option>
+                    </select>
+                </div>
+
+                <!-- 2. فلتر التاريخ (العمود الثاني) -->
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">التاريخ</label>
+                    <input type="date" id="dateFilter" class="form-control" style="direction: ltr; text-align: right;">
+                </div>
+
+                <!-- 3. فلتر التصنيف (العمود الثالث) -->
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">التصنيف</label>
                     <select id="categoryFilter" class="form-select">
                         <option value="all">الكل</option>
                         <option value="culture">ثقافة</option>
                         <option value="sport">رياضة</option>
                         <option value="music">موسيقى</option>
                         <option value="family">عائلي</option>
-                    </select>
-
-                    <input type="date" id="dateFilter" class="form-control">
-
-                    <select id="locationFilter" class="form-select">
-                        <option value="all">الكل</option>
-                        <option value="المسرح">المسرح</option>
-                        <option value="الملعب الجامعي">الملعب الجامعي</option>
-                        <option value="القاعة الرئيسية">القاعة الرئيسية</option>
-                    </select>
-
-                </div>
-                <div class="col-md-4">
-                    <label for="dateFilter" class="form-label">التاريخ</label>
-                    <input type="text" id="dateFilter" class="form-control" placeholder="يوم / شهر / سنة" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
-                </div>
-                <div class="col-md-4">
-                    <label for="locationFilter" class="form-label">المكان</label>
-                    <select id="locationFilter" class="form-select">
-                        <option value="all">الكل</option>
-                        <option value="main-hall">القاعة الرئيسية</option>
-                        <option value="stadium">الملعب الجامعي</option>
-                        <option value="theater">المسرح</option>
                     </select>
                 </div>
             </form>
