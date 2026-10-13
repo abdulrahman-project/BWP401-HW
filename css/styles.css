@@ -192,3 +192,8 @@ body.dark-theme div[style*="background-color"] {
     box-shadow: none !important;
     border: none !important;
 }
+/* ÇÓÊËäÇÁ ßÑæÊ ÇáİÚÇáíÇÊ ĞÇÊ ÇáÕáÉ ãä ÇáÇÑÊİÇÚ ÇáÃÏäì */
+.col-lg-4 .card {
+    min-height: auto !important;
+    padding: 0 !important;
+}
