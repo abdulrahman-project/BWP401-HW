@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - دليل فعاليات الجامعة</title>
+
+    <link rel="icon" type="image/png" href="img/logo7.png">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="font-family: 'Cairo', sans-serif;">
+
+    <!-- Page header -->
+    <header class="bg-white border-bottom shadow-sm">
+
+        <div class="container-fluid px-4 py-3">
+            <div class="row align-items-center">
+
+
+                <div class="col-3 text-start">
+                    <img src="img/logo1.png" alt="شعار اليمين" style="max-height: 150px;" class="img-fluid">
+                </div>
+
+
+                <div class="col-6 text-center">
+                    <h2 class="fw-bold text-primary mb-0">دليل فعاليات الجامعة الافتراضية</h2>
+                </div>
+
+
+                <div class="col-3 text-end d-flex flex-column align-items-end justify-content-center">
+
+                    <img src="img/logo2.png" alt="شعار اليسار" style="max-height: 75px;" class="img-fluid mb-1">
+
+
+                    <div class="d-flex gap-1">
+                        <img src="img/flag1.png" alt="علم بريطانيا" style="height: 32px; width: 49px; object-fit: cover;">
+                        <img src="img/flag2.png" alt="علم سوريا" style="height: 32px; width: 49px; object-fit: cover;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Main navigation bar -->
+        <div class="mt-2 bg-dark w-100">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark py-2">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                            <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    
+    <main class="container my-5">
+
+        <h1 class="text-center mb-5 border-bottom pb-3">اتصل بنا</h1>
+
+        <div class="row g-5">
+            <!-- Communication Model -->
+            <div class="col-md-7">
+                <h3 class="mb-4">أرسل لنا رسالة</h3>
+
+                <!-- Alert messages -->
+                <div id="alertMessage"></div>
+
+                <form id="contactForm" novalidate>
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">الاسم الكامل <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="userName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">البريد الإلكتروني <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="userEmail" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="userMessage" class="form-label">الرسالة <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="userMessage" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">إرسال الرسالة</button>
+                </form>
+            </div>
+
+            <!-- Alternative contact information -->
+            <div class="col-md-5">
+                <div class="bg-light p-4 rounded shadow-sm h-100">
+                    <h3 class="mb-4 border-bottom pb-2">معلومات التواصل البديلة</h3>
+
+                    <div class="mb-4">
+                        <h5><i class="text-primary me-2">✉</i> البريد العام:</h5>
+                        <p class="text-muted">info@svuonline.org</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5><i class="text-primary me-2">☏</i> صندوق البريد:</h5>
+                        <p class="text-muted">35329</p>
+                    </div>
+
+                    <div>
+                        <h5><i class="text-primary me-2">🌐</i> حساباتنا على السوشيال ميديا:</h5>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><a href="https://www.facebook.com/svuonline.org" target="_blank" class="text-secondary text-decoration-none">صفحتنا على فيسبوك</a></li>
+                            <li class="mb-2"><a href="https://twitter.com/SVU_Syria" target="_blank" class="text-secondary text-decoration-none">حسابنا على إكس (تويتر)</a></li>
+                            <li class="mb-2"><a href="http://instagram.com/syrian_virtual_university" target="_blank" class="text-secondary text-decoration-none">حسابنا على إنستغرام</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-2">معلومات التواصل: info@svuonline.org | صندوق البريد: 35329 </p>
+            <p class="mb-2">
+                روابط سوشيال ميديا:
+                <a href="https://www.facebook.com/svuonline.org" target="_blank" class="text-white text-decoration-none mx-2">فيسبوك</a> |
+                <a href="https://twitter.com/SVU_Syria" target="_blank" class="text-white text-decoration-none mx-2">تويتر</a> |
+                <a href="http://instagram.com/syrian_virtual_university" target="_blank" class="text-white text-decoration-none mx-2">إنستغرام</a>
+            </p>
+            <p class="mb-0 text-white-50">&copy; 2026 جميع الحقوق محفوظة لدليل فعاليات الجامعة الافتراضية.</p>
+        </div>
+        <button id="scrollToTopBtn" class="btn btn-primary rounded-circle" title="العودة للأعلى">
+            ↑
+        </button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+<button id="darkModeToggle" title="تبديل الوضع الليلي">🌙</button>

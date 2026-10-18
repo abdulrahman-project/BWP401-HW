@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفعاليات - دليل فعاليات الجامعة</title>
+
+    <link rel="icon" type="image/png" href="img/logo7.png">
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="font-family: 'Cairo', sans-serif;">
+
+    <!-- Page header -->
+    <header class="bg-white border-bottom shadow-sm">
+
+        <div class="container-fluid px-4 py-3">
+            <div class="row align-items-center">
+
+
+                <div class="col-3 text-start">
+                    <img src="img/logo1.png" alt="شعار اليمين" style="max-height: 150px;" class="img-fluid">
+                </div>
+
+
+                <div class="col-6 text-center">
+                    <h2 class="fw-bold text-primary mb-0">دليل فعاليات الجامعة الافتراضية</h2>
+                </div>
+
+
+                <div class="col-3 text-end d-flex flex-column align-items-end justify-content-center">
+
+                    <img src="img/logo2.png" alt="شعار اليسار" style="max-height: 75px;" class="img-fluid mb-1">
+
+
+                    <div class="d-flex gap-1">
+                        <img src="img/flag1.png" alt="علم بريطانيا" style="height: 32px; width: 49px; object-fit: cover;">
+                        <img src="img/flag2.png" alt="علم سوريا" style="height: 32px; width: 49px; object-fit: cover;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Main navigation bar -->
+        <div class="mt-2 bg-dark w-100">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark py-2">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="events.html">الفعاليات</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    
+    <main class="container my-5">
+
+        <h2 class="mb-4 text-center border-bottom pb-2">جميع الفعاليات</h2>
+
+        <!-- Search and filter toolbar -->
+        <section class="mb-5 bg-light p-4 rounded shadow-sm">
+            <form class="row g-3">
+
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">التصنيف</label>
+                    <select id="categoryFilter" class="form-select">
+                        <option value="all">الكل</option>
+                        <option value="culture">ثقافة</option>
+                        <option value="sport">رياضة</option>
+                        <option value="music">موسيقى</option>
+                        <option value="family">عائلي</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">التاريخ</label>
+                    <input type="text" id="dateFilter" class="form-control" placeholder="يوم / شهر / سنة" onfocus="this.type='date'" onblur="if(!this.value) this.type='text'">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label fw-bold">المكان</label>
+                    <select id="locationFilter" class="form-select">
+                        <option value="all">الكل</option>
+                        <option value="main-hall">القاعة الرئيسية</option>
+                        <option value="stadium">الملعب الجامعي</option>
+                        <option value="theater">المسرح</option>
+                    </select>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- List of Events Cards -->
+        <section class="row g-4" id="eventsList">
+           
+            <div class="col-md-4 event-item" data-category="culture" data-location="main-hall" data-date="2026-11-15">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/book day.jpeg" class="card-img-top" alt="معرض الكتاب">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">ثقافة</span>
+                        <h5 class="card-title">معرض الكتاب السنوي</h5>
+                        <p class="card-text text-muted small mb-1"><strong>التاريخ:</strong> 15-11-2026</p>
+                        <p class="card-text text-muted small mb-3"><strong>المكان:</strong> القاعة الرئيسية</p>
+                        <p class="card-text">أكبر تجمع ثقافي لعرض أحدث الإصدارات والكتب المتنوعة في رحاب الجامعة.</p>
+                        <a href="event (1) .html" class="btn btn-outline-primary w-100 mt-auto">التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 event-item" data-category="sport" data-location="stadium" data-date="2026-11-20">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/mar day.jpeg" class="card-img-top" alt="ماراثون">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">رياضة</span>
+                        <h5 class="card-title">ماراثون المدينة</h5>
+                        <p class="card-text text-muted small mb-1"><strong>التاريخ:</strong> 20-11-2026</p>
+                        <p class="card-text text-muted small mb-3"><strong>المكان:</strong> الملعب الجامعي</p>
+                        <p class="card-text">سباق جري لمسافة 5 كيلومترات لتعزيز الصحة والنشاط البدني بين الطلاب.</p>
+                        <a href="event (2) .html" class="btn btn-outline-primary w-100 mt-auto">التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 event-item" data-category="music" data-location="theater" data-date="2026-11-25">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/song day.jpeg" class="card-img-top" alt="حفل موسيقي">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">موسيقى</span>
+                        <h5 class="card-title">حفل موسيقي</h5>
+                        <p class="card-text text-muted small mb-1"><strong>التاريخ:</strong> 25-11-2026</p>
+                        <p class="card-text text-muted small mb-3"><strong>المكان:</strong> المسرح</p>
+                        <p class="card-text">أمسية فنية راقية مع فرقة الأوركسترا وعزف مباشر لأجمل المقطوعات.</p>
+                        <a href="event (3) .html" class="btn btn-outline-primary w-100 mt-auto">التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-2">معلومات التواصل: info@svuonline.org | صندوق البريد: 35329 </p>
+            <p class="mb-2">
+                روابط سوشيال ميديا:
+                <a href="https://www.facebook.com/svuonline.org" target="_blank" class="text-white text-decoration-none mx-2">فيسبوك</a> |
+                <a href="https://twitter.com/SVU_Syria" target="_blank" class="text-white text-decoration-none mx-2">تويتر</a> |
+                <a href="http://instagram.com/syrian_virtual_university" target="_blank" class="text-white text-decoration-none mx-2">إنستغرام</a>
+            </p>
+            <p class="mb-0 text-white-50">&copy; 2026 جميع الحقوق محفوظة لدليل فعاليات الجامعة الافتراضية.</p>
+        </div>
+        <button id="scrollToTopBtn" class="btn btn-primary rounded-circle" title="العودة للأعلى">
+            ↑
+        </button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+<button id="darkModeToggle" title="تبديل الوضع الليلي">🌙</button>
